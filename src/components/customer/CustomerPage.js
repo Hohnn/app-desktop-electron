@@ -130,7 +130,7 @@ export default function CustomerPage() {
     return (
         <>
        <h1>Utilisateur</h1>
-        <div className="row mt-3">
+        <div className="row mt-2">
             <form className="col-12 " onSubmit={handleSubmit} >
                 <nav className='mb-3 '>
                     <button type='button' className='btn' onClick={ e => setCategory('user')}>Informations</button>
@@ -191,6 +191,7 @@ export default function CustomerPage() {
                 {category === 'order' && (
                 <div className="card p-4" id='order'>
                     <div className="mb-3">
+                        <label className="form-label">Réservation</label>
                         <div className='orderPreview' id='style-7'>
                             <div className='listContainer'>
                                 {data.orders ? data.orders.map((order, key) =>
