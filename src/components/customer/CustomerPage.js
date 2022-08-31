@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom"
 import OrderCard from '../order/OrderCard'
 import './Customer.scss'
 import {displayDate, displayTime} from '../../utils/dateFormat'
+import OrderCard from '../order/OrderCard'
+import './Customer.scss'
+import {displayDate, displayTime} from '../../utils/dateFormat'
 
 export default function CustomerPage() {
     const { id } = useParams()
@@ -26,11 +29,6 @@ export default function CustomerPage() {
             },
             body: JSON.stringify(data.customer)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        }
-        )
     }
 
     useEffect(() => {
@@ -212,9 +210,11 @@ export default function CustomerPage() {
                     </div>
                     <div>
                         <button type="submit" className="btn btn-primary" onClick={e => handleSubmit(e)}>Enregistrer</button>
+                        
                     </div>
-                </div>
             </form>
+         
+     
          
     
         </div>
